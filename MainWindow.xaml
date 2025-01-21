@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="303*"/>
+            <ColumnDefinition Width="497*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="2">
+            <Canvas>
+                <Button x:Name="GetButton" Content="Get" Canvas.Left="123" Canvas.Top="43" Width="50" Height="20" Click="GetButton_Click"/>
+                <TextBox x:Name="InputId" Canvas.Left="224" TextWrapping="Wrap" Canvas.Top="43" Width="120" Height="18"/>
+                <DataGrid x:Name="dataStudentGrid" Height="132" Width="318" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="26" Canvas.Top="75" SelectionChanged="DataStudentGrid_SelectionChanged" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <CheckBox x:Name="checkboxCreate" Content="Create" Canvas.Left="502" Canvas.Top="42" Checked="checkboxCreate_Checked"/>
+                <CheckBox x:Name="checkboxUpdate" Content="Update" Canvas.Left="615" Canvas.Top="42" RenderTransformOrigin="-0.024,-2.448" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="checkboxUpdate_Checked"/>
+                <Button x:Name="createOrUpdateButton" Content="Create/Update" Canvas.Left="502" Canvas.Top="190" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" Click="createOrUpdateButton_Click"/>
+                <Button x:Name="clearButton" Content="Clear" Canvas.Left="615" Canvas.Top="190" HorizontalAlignment="Center" VerticalAlignment="Top" Width="87" Click="clearButton_Click"/>
+                <TextBox x:Name="id_input_textbox" Canvas.Left="502" TextWrapping="Wrap" Text="Inserisci ID" Canvas.Top="75" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center" TextChanged="id_input_textbox_TextChanged"/>
+                <TextBox x:Name="firstname_input_textbox" Canvas.Left="502" TextWrapping="Wrap" Text="Inserici nome" Canvas.Top="98" Width="200" HorizontalAlignment="Center" VerticalAlignment="Top" TextChanged="firstname_input_textbox_TextChanged"/>
+                <TextBox x:Name="lastname_input_textbox" Canvas.Left="502" TextWrapping="Wrap" Text="Inserisci cognome" Canvas.Top="121" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" TextChanged="lastname_input_textbox_TextChanged"/>
+                <TextBox x:Name="class_input_textbox" Canvas.Left="502" TextWrapping="Wrap" Text="Inserisci classe" Canvas.Top="144" Width="200" HorizontalAlignment="Center" VerticalAlignment="Top" TextChanged="class_input_textbox_TextChanged"/>
+                <TextBox x:Name="age_input_textbox" Canvas.Left="502" TextWrapping="Wrap" Text="Inserisci età" Canvas.Top="167" Width="200" HorizontalAlignment="Center" VerticalAlignment="Top" TextChanged="age_input_textbox_TextChanged"/>
+                <Button x:Name="GetAllButton" Content="Get All" Canvas.Left="26" Canvas.Top="43" Click="GetAllButton_Click"/>
+                <Button x:Name="DeleteButton" Content="Delete" Canvas.Left="26" Canvas.Top="246" HorizontalAlignment="Left" VerticalAlignment="Center" Width="80" Click="DeleteButton_Click"/>
+                <TextBox x:Name="InputDeleteId" Canvas.Left="123" TextWrapping="Wrap" Text="Inserisci ID da cancellare" Canvas.Top="247" Width="214" TextChanged="InputDeleteId_TextChanged" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </Canvas>
+        </Grid>
+
+    </Grid>
+</Window>
